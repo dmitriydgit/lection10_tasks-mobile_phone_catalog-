@@ -1,0 +1,58 @@
+<!-- <div class="jumbotron text-center">
+  <h2>Пользователи системы</h2>
+
+  <a routerLink="/users/create" class="btn btn-sm btn-info">Создать пользователя</a>
+</div>
+
+<div class="user-list row" *ngIf="users">
+
+    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let user of users">
+      <a [routerLink]="['/users', user.id]" class="card clickable">
+        <div class="card-img">
+          <img [src]="user.avatar">
+        </div>
+        <div class="card-block">
+          <div class="card-title">
+            {{ user.name }}
+          </div>
+          <p class="card-text">
+            {{ user.username }}
+          </p>
+        </div>
+      </a>
+    </div>
+
+</div> -->
+
+<!-- //<router-outlet></router-outlet> -->
+
+<div class="user-list row">
+
+	<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let good of goods">
+		<!-- <a [routerLink]="['/users', user.id]" class="card clickable"> -->
+		<div class="card-img">
+			<img [src]="good.photo">
+		</div>
+		<div class="card-block">
+			<div class="card-title">
+				Название: {{ good.name }}
+			</div>
+			<p class="card-text">
+				Цена: {{ good.qty }}
+			</p>
+		</div>
+
+		<button (click)="openGoodById(good.id)">
+
+			<i>просмотреть</i>
+			<!-- <a [routerLink]="['/goods-list', good.id, 'view']" routerLinkActive="active">просмотреть</a> -->
+
+		</button>
+
+		<button (click)="buyGoodById(good.id)">
+			<i>купить</i>
+			<!-- <a [routerLink]="['/goods-list', good.id, 'buy']" routerLinkActive="active">купить</a> -->
+		</button>
+		<!-- </a> -->
+	</div>
+</div>

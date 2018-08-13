@@ -1,0 +1,12 @@
+<div>
+	<button (click)="goBack()">назад</button>
+
+	<h2>{{ good?.name }}
+		<small>{{ good?.name }}</small>
+	</h2>
+	<img [src]="good?.photo" class="img-rounded">
+	<p>{{good?.description}}</p>
+
+	<!-- good !== null || good !== undefined ? good : null  -->
+
+</div>
